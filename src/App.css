@@ -1,0 +1,71 @@
+
+.amperM{
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.sinSlide1{
+    margin-left: 100px;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+.demo1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+  display: block;
+}
+.slideBlock{
+  display: flex;
+  justify-content: space-between;
+}
+.fg{
+  background: red;
+}
+h1{
+  font-size: 16px;
+  margin: 0 10px;
+}
+h2{
+  margin: 3px;
+}
+.demonstration{
+  width: 80%;
+  border: 1px solid slategray;
+  border-radius: 8px;
+}
+.footer>a:active{
+  color: red;
+}
+.footer{
+  background-color: #222;
+  position:fixed;
+  left:0;
+  bottom: 0;
+  height: 20px;
+  padding: 20px;
+  color: white;
+}
+.footer>a{
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+}
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
