@@ -74,7 +74,7 @@ class Slide1 extends Component{
         <div className="slideBlock">
           <div className="demonstration">
               <div className="demo1">
-                  <div className="voltmetr">
+                  <div className="voltmetrV">
                       <button  onClick={(e)=>this.OpenBlock(e)}>^</button><span>{this.state.qw}V</span>
                   </div>
 
