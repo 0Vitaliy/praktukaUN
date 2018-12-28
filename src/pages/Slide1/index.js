@@ -79,6 +79,16 @@ class Slide1 extends Component{
                   </div>
 
                   <svg width="400" height="250" viewBox="0 0 500 350">
+                      {(this.state.qw>=0)?(
+                      <text x="10" y="140">+</text>):
+                          (<text x="10" y="140">-</text>)
+                      }
+                      {(this.state.qw>=0)?(
+                      <text x="10" y="60">-</text>):
+                          ( <text x="10" y="60">+</text>)
+                      }
+
+
                      <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
                       <line x1="40" x2="40" y1="70" y2="20" stroke="#000000"></line>
                       <line x1="40" x2="300" y1="20" y2="20" stroke="#000000"></line>

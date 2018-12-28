@@ -77,6 +77,16 @@ class Slide2 extends Component{
                             </div>
 
                             <svg className='sxema2' width="400" height="250" viewBox="0 0 500 350">
+                                {(this.state.qw>=0)?(
+                                        <text x="10" y="180">+</text>):
+                                    (<text x="10" y="180">-</text>)
+                                }
+                                {(this.state.qw>=0)?(
+                                        <text x="10" y="100">-</text>):
+                                    ( <text x="10" y="100">+</text>)
+                                }
+
+
                                 <line x1="10" x2="40" y1="100" y2="100" stroke="#000000"></line>
                                 <line x1="10" x2="48" y1="108" y2="108" stroke="#000000"></line>
 
@@ -92,6 +102,34 @@ class Slide2 extends Component{
                                 <line x1="274" x2="242" y1="79" y2="37" stroke="#000000"></line>
                                 <line x1="242" x2="208" y1="37" y2="79" stroke="#000000"></line>
 
+
+                                <line x1="202" x2="227" y1="48" y2="82" stroke="#000000"></line>
+                                <line x1="202" x2="228" y1="48" y2="48" stroke="#000000"></line>
+                                <line x1="228" x2="228" y1="48" y2="82" stroke="#000000"></line>
+                                <line x1="212" x2="236" y1="28" y2="62" stroke="#000000"></line>
+
+
+
+                                <line x1="242" x2="267" y1="98" y2="132" stroke="#000000"></line>
+                                <line x1="242" x2="268" y1="98" y2="98" stroke="#000000"></line>
+                                <line x1="268" x2="268" y1="98" y2="132" stroke="#000000"></line>
+                                <line x1="252" x2="276" y1="78" y2="112" stroke="#000000"></line>
+
+                                <line x1="422" x2="458" y1="37" y2="37" stroke="#000000"></line>
+                                <line x1="422" x2="422" y1="37" y2="87" stroke="#000000"></line>
+                                <line x1="458" x2="458" y1="37" y2="87" stroke="#000000"></line>
+                                <line x1="422" x2="458" y1="87" y2="87" stroke="#000000"></line>
+
+
+                                <line x1="213" x2="213" y1="100" y2="120" stroke="#000000"></line>
+                                <line x1="213" x2="233" y1="100" y2="100" stroke="#000000"></line>
+                                <line x1="213" x2="233" y1="120" y2="100" stroke="#000000"></line>
+                                <line x1="203" x2="223" y1="110" y2="90" stroke="#000000"></line>
+
+                                <line x1="258" x2="258" y1="50" y2="70" stroke="#000000"></line>
+                                <line x1="258" x2="278" y1="50" y2="50" stroke="#000000"></line>
+                                <line x1="258" x2="278" y1="70" y2="50" stroke="#000000"></line>
+                                <line x1="248" x2="268" y1="60" y2="40" stroke="#000000"></line>
 
 
 
