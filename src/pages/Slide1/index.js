@@ -37,7 +37,7 @@ class Slide1 extends Component{
 
   render(){
       var mod=Math.abs(this.state.qw)
-      console.log(this.state.qw);
+      // console.log(this.state.qw);
       if(mod===10) {
 
           var n=2;
@@ -46,7 +46,7 @@ class Slide1 extends Component{
           var runY =(mod / n)*1.2 + 's';
           var runK=(mod / n)*1.3 + 's';
           var runM=(mod / n)*1.4 + 's';
-          console.log(runX);
+          // console.log(runX);
       }
       if(mod===20) {
            n=7;
@@ -80,16 +80,16 @@ class Slide1 extends Component{
 
                   <svg width="400" height="250" viewBox="0 0 500 350">
                       {(this.state.qw>=0)?(
-                      <text x="10" y="140">+</text>):
+                              <text x="10" y="140">+</text>):
                           (<text x="10" y="140">-</text>)
                       }
                       {(this.state.qw>=0)?(
-                      <text x="10" y="60">-</text>):
+                              <text x="10" y="60">-</text>):
                           ( <text x="10" y="60">+</text>)
                       }
 
 
-                     <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
+                      <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
                       <line x1="40" x2="40" y1="70" y2="20" stroke="#000000"></line>
                       <line x1="40" x2="300" y1="20" y2="20" stroke="#000000"></line>
                       <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
@@ -144,12 +144,12 @@ class Slide1 extends Component{
                       }
 
 
-                          <circle id="circle" r="3" cx="0" cy="0" fill="tomato"/>
-                          <circle id="circlex" r="3" cx="0" cy="0" fill="tomato" />
-                          <circle id="circley" r="3" cx="0" cy="0" fill="tomato" />
-                          <circle id="circlek" r="3" cx="0" cy="0" fill="tomato" />
-                          <circle  id="circlez" r="3" cx="0" cy="0" fill="tomato" />
-                          <circle  id="circlem" r="3" cx="0" cy="0" fill="tomato" />
+                      <circle id="circle" r="3" cx="0" cy="0" fill="tomato"/>
+                      <circle id="circlex" r="3" cx="0" cy="0" fill="tomato" />
+                      <circle id="circley" r="3" cx="0" cy="0" fill="tomato" />
+                      <circle id="circlek" r="3" cx="0" cy="0" fill="tomato" />
+                      <circle  id="circlez" r="3" cx="0" cy="0" fill="tomato" />
+                      <circle  id="circlem" r="3" cx="0" cy="0" fill="tomato" />
 
 
                       <animateMotion
@@ -171,7 +171,7 @@ class Slide1 extends Component{
                       <animateMotion
                           href="#circlek"
                           dur={runX}
-                          begin="0s"
+
                           fill="freeze"
                           repeatCount="indefinite">
                           <mpath href="#motionPath" />
@@ -267,80 +267,80 @@ class Slide1 extends Component{
                       </svg>
                   </div>
               </div>
-              <div className="sinSlide1">
-                  <svg version="1.2" className="graph" aria-labelledby="title" role="img">
-                      <title id="title">Демо екран</title>
-                      <g className="grid x-grid" id="xGrid">
-                          <line x1="90" x2="90" y1="5" y2="235"></line>
-                      </g>
-                      <g className="grid y-grid" id="yGrid">
-                          <line x1="90" x2="500" y1="120" y2="120"></line>
-                      </g>
-                      <g className="labels x-labels">
-                          <text x="120" y="140">1</text>
-                          <text x="150" y="140">2</text>
-                          <text x="180" y="140">3</text>
-                          <text x="210" y="140">4</text>
-                          <text x="240" y="140">5</text>
-                          <text x="270" y="140">6</text>
-                          <text x="300" y="140">7</text>
-                          <text x="330" y="140">8</text>
-                          <text x="360" y="140">9</text>
-                          <text x="390" y="140">10</text>
-                          <text x="420" y="140">11</text>
-                          <text x="450" y="140">12</text>
-                          <text x="480" y="140">13</text>
+                  <div className="sinSlide1">
+                      <svg version="1.2" className="graph" aria-labelledby="title" role="img">
+                          <title id="title">Демо екран</title>
+                          <g className="grid x-grid" id="xGrid">
+                              <line x1="90" x2="90" y1="5" y2="235"></line>
+                          </g>
+                          <g className="grid y-grid" id="yGrid">
+                              <line x1="90" x2="500" y1="120" y2="120"></line>
+                          </g>
+                          <g className="labels x-labels">
+                              <text x="120" y="140">1</text>
+                              <text x="150" y="140">2</text>
+                              <text x="180" y="140">3</text>
+                              <text x="210" y="140">4</text>
+                              <text x="240" y="140">5</text>
+                              <text x="270" y="140">6</text>
+                              <text x="300" y="140">7</text>
+                              <text x="330" y="140">8</text>
+                              <text x="360" y="140">9</text>
+                              <text x="390" y="140">10</text>
+                              <text x="420" y="140">11</text>
+                              <text x="450" y="140">12</text>
+                              <text x="480" y="140">13</text>
 
-                      </g>
-                      <g className="labels y-labels">
-                          <text x="80" y="25">25</text>
-                          <text x="80" y="45">20</text>
-                          <text x="80" y="85">10</text>
-                          <text x="80" y="125">0</text>
-                          <text x="80" y="165">-10</text>
-                          <text x="80" y="205">-20</text>
-                          <text x="80" y="225">-25</text>
+                          </g>
+                          <g className="labels y-labels">
+                              <text x="80" y="25">25</text>
+                              <text x="80" y="45">20</text>
+                              <text x="80" y="85">10</text>
+                              <text x="80" y="125">0</text>
+                              <text x="80" y="165">-10</text>
+                              <text x="80" y="205">-20</text>
+                              <text x="80" y="225">-25</text>
 
-                      </g>
-                      <g className="data" data-setname="Our first data set">
-                          <circle cx="90" cy="120" data-value="7.2" r="4"></circle>
-                          <circle className={this.state.one?'none':'block'} cx="120" cy="85" data-value="8.1" r="4"></circle>
-                          <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="120" y2="85" stroke="red"></line>
+                          </g>
+                          <g className="data" data-setname="Our first data set">
+                              <circle cx="90" cy="120" data-value="7.2" r="4"></circle>
+                              <circle className={this.state.one?'none':'block'} cx="120" cy="85" data-value="8.1" r="4"></circle>
+                              <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="120" y2="85" stroke="red"></line>
 
-                          <circle className={this.state.two?'none':'block'} cx="150" cy="45" data-value="7.7" r="4"></circle>
-                          <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="85" y2="45" stroke="red"></line>
+                              <circle className={this.state.two?'none':'block'} cx="150" cy="45" data-value="7.7" r="4"></circle>
+                              <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="85" y2="45" stroke="red"></line>
 
-                          <circle className={this.state.tree?'none':'block'} cx="180" cy="25" data-value="6.8" r="4"></circle>
-                          <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="45" y2="25" stroke="red"></line>
+                              <circle className={this.state.tree?'none':'block'} cx="180" cy="25" data-value="6.8" r="4"></circle>
+                              <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="45" y2="25" stroke="red"></line>
 
-                          <circle className={this.state.four?'none':'block'} cx="210" cy="45" data-value="6.7" r="4"></circle>
-                          <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="25" y2="45" stroke="red"></line>
+                              <circle className={this.state.four?'none':'block'} cx="210" cy="45" data-value="6.7" r="4"></circle>
+                              <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="25" y2="45" stroke="red"></line>
 
-                          <circle  className={this.state.five?'none':'block'} cx="240" cy="85" data-value="6.7" r="4"></circle>
-                          <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="45" y2="85" stroke="red"></line>
+                              <circle  className={this.state.five?'none':'block'} cx="240" cy="85" data-value="6.7" r="4"></circle>
+                              <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="45" y2="85" stroke="red"></line>
 
-                          <circle  className={this.state.six?'none':'block'} cx="270" cy="120" data-value="6.7" r="4"></circle>
-                          <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="85" y2="120" stroke="red"></line>
+                              <circle  className={this.state.six?'none':'block'} cx="270" cy="120" data-value="6.7" r="4"></circle>
+                              <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="85" y2="120" stroke="red"></line>
 
-                          <circle  className={this.state.seven?'none':'block'} cx="300" cy="165" data-value="6.7" r="4"></circle>
-                          <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="120" y2="165" stroke="red"></line>
+                              <circle  className={this.state.seven?'none':'block'} cx="300" cy="165" data-value="6.7" r="4"></circle>
+                              <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="120" y2="165" stroke="red"></line>
 
-                          <circle   className={this.state.eight?'none':'block'}cx="330" cy="205" data-value="6.7" r="4"></circle>
-                          <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="165" y2="205" stroke="red"></line>
+                              <circle   className={this.state.eight?'none':'block'}cx="330" cy="205" data-value="6.7" r="4"></circle>
+                              <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="165" y2="205" stroke="red"></line>
 
-                          <circle  className={this.state.nine?'none':'block'} cx="360" cy="225" data-value="6.7" r="4"></circle>
-                          <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="205" y2="225" stroke="red"></line>
+                              <circle  className={this.state.nine?'none':'block'} cx="360" cy="225" data-value="6.7" r="4"></circle>
+                              <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="205" y2="225" stroke="red"></line>
 
-                          <circle  className={this.state.ten?'none':'block'} cx="390" cy="205" data-value="6.7" r="4"></circle>
-                          <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="225" y2="205" stroke="red"></line>
+                              <circle  className={this.state.ten?'none':'block'} cx="390" cy="205" data-value="6.7" r="4"></circle>
+                              <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="225" y2="205" stroke="red"></line>
 
-                          <circle  className={this.state.eleven?'none':'block'} cx="420" cy="165" data-value="6.7" r="4"></circle>
-                          <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="205" y2="165" stroke="red"></line>
+                              <circle  className={this.state.eleven?'none':'block'} cx="420" cy="165" data-value="6.7" r="4"></circle>
+                              <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="205" y2="165" stroke="red"></line>
 
-                          <circle  className={this.state.twelve?'none':'block'} cx="450" cy="120" data-value="6.7" r="4"></circle>
-                          <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="165" y2="120" stroke="red"></line>
-                      </g>
-                  </svg>
+                              <circle  className={this.state.twelve?'none':'block'} cx="450" cy="120" data-value="6.7" r="4"></circle>
+                              <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="165" y2="120" stroke="red"></line>
+                          </g>
+                      </svg>
               </div>
           </div>
             <Description text="op hvkjdghkj hfgkjdsh gjkhfgsjdhg kk lsdjgkj hdkds kkshd gjs dghh"/>
