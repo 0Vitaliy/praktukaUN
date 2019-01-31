@@ -67,7 +67,8 @@ class Slide2 extends Component{
         return(
             <div >
                 <div>
-                    <h2>Інтерактивна демонстрація напів-періодного "" змінного електричного струму</h2>
+                    <h2>Інтерактивна демонстрація дво-напів-періодного випрямлення змінного електричного струму.
+                    </h2>
                 </div>
                 <div className="slideBlock">
                     <div className="demonstration">
@@ -392,7 +393,13 @@ class Slide2 extends Component{
                             </svg>
                         </div>
                     </div>
-                    <Description text="op hvkjdghkj hfgkjdsh gjkhfgsjdhg kk lsdjgkj hdkds kkshd gjs dghh"/>
+                    <Description text="Опис установки симуляційної  моделі:
+Кероване джерело змінного струму.
+Вольтметр для вимірювання вхідної змінної напруги.
+Діод.
+Навантаження (опір).
+Амперметр для вимірювання вихідного струму.
+"/>
 
                 </div>
             </div>

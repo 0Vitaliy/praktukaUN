@@ -30,7 +30,8 @@
     display: none;
 }
 .block{
-
+    padding:5px;
+    text-align: center;
     display: block;
 }
 

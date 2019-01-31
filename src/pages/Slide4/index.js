@@ -19,7 +19,7 @@ class Slide4 extends Component{
         fotodiod:0
     };
     OpenFotoDiod() {
-        if(this.state.qw===-5) {
+        if(this.state.qw===-5 && this.state.fotodiod<2) {
             this.setState({
 
                 fotodiod: this.state.fotodiod + 1,
@@ -29,10 +29,13 @@ class Slide4 extends Component{
         }
     }
     OpenBlock() {
-        this.setState({
-            qw: this.state.value[this.state.i],
-            i:this.state.i+1
-        })
+
+        if(this.state.i<5) {
+            this.setState({
+                qw: this.state.value[this.state.i],
+                i: this.state.i + 1
+            })
+        }
         if(this.state.fotodiod===0){
         if(this.state.qw===0 && this.state.i===0 )  {this.setState({one: false})}
         if(this.state.qw===-1 && this.state.i===1 ) {this.setState({two: false})}
@@ -60,13 +63,17 @@ class Slide4 extends Component{
 
     }
     render(){
+
+
         var mod=Math.abs(this.state.qw)
         // console.log(this.state.qw);
         if(mod===0) {
+            var VD ="M 250 1 l 10 0 l 0 65 l -10 0"
             var Width=250;
             var widtH=260;
         }
         if(mod===1) {
+            VD ="M 250 1 l 10 0 l 0 65 l -10 0"
             var Width=250;
             var widtH=260;
             var n=2;
@@ -78,7 +85,8 @@ class Slide4 extends Component{
             // console.log(runX);
         }
         if(mod===2) {
-            var Width=247;
+            VD ="M 244 1 l 18 0 l 0 65 l -18 0"
+            var Width=243;
             var widtH=263;
             n=7;
             run = mod / n + 's';
@@ -88,6 +96,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.7 + 's';
         }
         if(mod===3) {
+            VD ="M 245 1 l 20 0 l 0 65 l -20 0"
             var Width=244;
             var widtH=266;
             n=10;
@@ -98,6 +107,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.6 + 's';
         }
         if(mod===4) {
+            VD ="M 242 1 l 26 0 l 0 65 l -26 0"
             var Width=241;
             var widtH=269;
             n=10;
@@ -108,6 +118,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.6 + 's';
         }
         if(mod===5) {
+            VD ="M 236 1 l 38 0 l 0 65 l -38 0"
             var Width=235;
             var widtH=275;
             n=10;
@@ -121,7 +132,7 @@ class Slide4 extends Component{
         return(
       <div >
           <div>
-              <h2>Фотодіод</h2>
+              <h2>Інтерактивна демонстрація роботи фотодіода.</h2>
           </div>
           <div className="slideBlock">
               <div className="demonstration">
@@ -147,15 +158,18 @@ class Slide4 extends Component{
 
                           <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
                           <line x1="40" x2="40" y1="70" y2="20" stroke="#000000"></line>
-                          <line x1="40" x2="300" y1="20" y2="20" stroke="#000000"></line>
+                          <line x1="40" x2="210" y1="20" y2="20" stroke="#000000"></line>
                           <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                          <line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>
-                          <line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>
-                          <line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>
-                          <line x1="330" x2="390" y1="20" y2="20" stroke="#000000"></line>
+                          {/*<line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>*/}
+                          {/*<line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>*/}
+                          {/*<line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>*/}
+                          <line x1="300" x2="390" y1="20" y2="20" stroke="#000000"></line>
 
                           <line x1="210" x2="300" y1="1" y2="1" stroke="#000000"></line>
                           <line x1="210" x2="210" y1="1" y2="65" stroke="#000000"></line>
+
+                          <path d={VD}
+                                fill="orange" stroke="none" stroke-width="3" />
 
                           <line x1={Width} x2={Width} y1="1" y2="65" stroke="#000000" stroke-dasharray="10"></line>
                           <line x1={widtH} x2={widtH} y1="1" y2="65" stroke="#000000" stroke-dasharray="10"></line>
@@ -180,12 +194,12 @@ class Slide4 extends Component{
 
                           <line x1="10" x2="48" y1="78" y2="78" stroke="#000000"></line>
                           <line x1="48" x2="48" y1="78" y2="28" stroke="#000000"></line>
-                          <line x1="48" x2="300" y1="28" y2="28" stroke="#000000"></line>
+                          <line x1="48" x2="210" y1="28" y2="28" stroke="#000000"></line>
                           <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                          <line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>
-                          <line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>
-                          <line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>
-                          <line x1="330" x2="382" y1="28" y2="28" stroke="#000000"></line>
+                          {/*<line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>*/}
+                          {/*<line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>*/}
+                          {/*<line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>*/}
+                          <line x1="300" x2="382" y1="28" y2="28" stroke="#000000"></line>
                           <line x1="382" x2="382" y1="28" y2="128" stroke="#000000"></line>
                           {/*<line x1="382" x2="412" y1="128" y2="128" stroke="#000000"></line>*/}
                           {/*<line x1="412" x2="412" y1="128" y2="142" stroke="#000000"></line>*/}
@@ -193,9 +207,9 @@ class Slide4 extends Component{
                           <line x1="382" x2="382" y1="142" y2="212" stroke="#000000"></line>
                           <line x1="382" x2="330" y1="212" y2="212" stroke="#000000"></line>
 
-                          <line x1="330" x2="330" y1="200" y2="240" stroke="#000000"></line>
-                          <line x1="270" x2="330" y1="200" y2="200" stroke="#000000"></line>
-                          <line x1="270" x2="330" y1="240" y2="240" stroke="#000000"></line>
+                          {/*<line x1="330" x2="330" y1="200" y2="240" stroke="#000000"></line>*/}
+                          {/*<line x1="270" x2="330" y1="200" y2="200" stroke="#000000"></line>*/}
+                          {/*<line x1="270" x2="330" y1="240" y2="240" stroke="#000000"></line>*/}
                           <line x1="270" x2="270" y1="200" y2="240" stroke="#000000"></line>
 
                           <line x1="270" x2="48" y1="212" y2="212" stroke="#000000"></line>
@@ -207,7 +221,7 @@ class Slide4 extends Component{
                           {(this.state.qw>=0)?(
                               <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
                                     d="M 10 74 l 34 0 l 0 -50 l 342 0 l 0 92 l 0 100 l -342 0 l 0 -100 l -34 0"/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                            d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 30 0 l 0 -22 l -30 0 l 0 -100 l -55 0"/>)
+                                                                                                                            d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 0 -122 l -65 0"/>)
                           }
 
 

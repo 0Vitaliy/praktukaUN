@@ -17,10 +17,12 @@ class Slide1 extends Component{
   };
 
     OpenBlock() {
+        if(this.state.i<12){
         this.setState({
                 qw: this.state.value[this.state.i],
                 i:this.state.i+1
             })
+        }
         if(this.state.qw===0 && this.state.i===0) {this.setState({one: false})}
         if(this.state.qw===10 && this.state.i===1) {this.setState({two: false})}
         if(this.state.qw===20 && this.state.i===2) {this.setState({tree: false})}
@@ -69,7 +71,8 @@ class Slide1 extends Component{
     return(
       <div >
         <div>
-          <h2>Інтерактивна демонстрація напів-періодного "" змінного електричного струму</h2>
+          <h2>Інтерактивна демонстрація одно-напівперіодного випрямлення змінного електричного струму.
+          </h2>
         </div>
         <div className="slideBlock">
           <div className="demonstration">
@@ -92,15 +95,18 @@ class Slide1 extends Component{
                       <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
                       <line x1="40" x2="40" y1="70" y2="20" stroke="#000000"></line>
                       <line x1="40" x2="300" y1="20" y2="20" stroke="#000000"></line>
-                      <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                      <line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>
-                      <line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>
-                      <line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>
+                      <line x1="300" x2="300" y1="8" y2="38" stroke="#000000"></line>
+                      <line x1="300" x2="330" y1="8" y2="23" stroke="#000000"></line>
+                      <line x1="300" x2="330" y1="38" y2="23" stroke="#000000"></line>
+                      <line x1="330" x2="330" y1="8" y2="38" stroke="#000000"></line>
                       <line x1="330" x2="390" y1="20" y2="20" stroke="#000000"></line>
                       <line x1="390" x2="390" y1="20" y2="120" stroke="#000000"></line>
-                      <line x1="390" x2="420" y1="120" y2="120" stroke="#000000"></line>
-                      <line x1="420" x2="420" y1="120" y2="150" stroke="#000000"></line>
-                      <line x1="420" x2="390" y1="150" y2="150" stroke="#000000"></line>
+
+
+
+                      {/*<line x1="390" x2="420" y1="120" y2="120" stroke="#000000"></line>*/}
+                      {/*<line x1="420" x2="420" y1="120" y2="150" stroke="#000000"></line>*/}
+                      {/*<line x1="420" x2="390" y1="150" y2="150" stroke="#000000"></line>*/}
                       <line x1="390" x2="390" y1="150" y2="220" stroke="#000000"></line>
                       <line x1="390" x2="330" y1="220" y2="220" stroke="#000000"></line>
                       <line x1="330" x2="330" y1="200" y2="240" stroke="#000000"></line>
@@ -114,15 +120,15 @@ class Slide1 extends Component{
                       <line x1="10" x2="48" y1="78" y2="78" stroke="#000000"></line>
                       <line x1="48" x2="48" y1="78" y2="28" stroke="#000000"></line>
                       <line x1="48" x2="300" y1="28" y2="28" stroke="#000000"></line>
-                      <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                      <line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>
-                      <line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>
-                      <line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>
+                      {/*<line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>*/}
+                      {/*<line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>*/}
+                      {/*<line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>*/}
+                      {/*<line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>*/}
                       <line x1="330" x2="382" y1="28" y2="28" stroke="#000000"></line>
                       <line x1="382" x2="382" y1="28" y2="128" stroke="#000000"></line>
-                      <line x1="382" x2="412" y1="128" y2="128" stroke="#000000"></line>
-                      <line x1="412" x2="412" y1="128" y2="142" stroke="#000000"></line>
-                      <line x1="412" x2="382" y1="142" y2="142" stroke="#000000"></line>
+                      {/*<line x1="382" x2="412" y1="128" y2="128" stroke="#000000"></line>*/}
+                      {/*<line x1="412" x2="412" y1="128" y2="142" stroke="#000000"></line>*/}
+                      {/*<line x1="412" x2="382" y1="142" y2="142" stroke="#000000"></line>*/}
                       <line x1="382" x2="382" y1="142" y2="212" stroke="#000000"></line>
                       <line x1="382" x2="330" y1="212" y2="212" stroke="#000000"></line>
 
@@ -139,8 +145,8 @@ class Slide1 extends Component{
 
                       {(this.state.qw>=0)?(
                           <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                d="M 10 74 l 34 0 l 0 -50 l 342 0 l 0 100  l 30 0 l 0 22 l -30 0 l 0 70 l -342 0 l 0 -100 l -34 0"/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                                               d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 30 0 l 0 -22 l -30 0 l 0 -100 l -55 0"/>)
+                                d="M 10 74 l 34 0 l 0 -50 l 342 0 l 0 122  l 0 70 l -342 0 l 0 -100 l -34 0"/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
+                                                                                                                                               d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70   l 0 -122 l -55 0"/>)
                       }
 
 

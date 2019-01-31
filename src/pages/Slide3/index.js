@@ -89,7 +89,7 @@ class Slide3 extends Component{
         return(
             <div>
                 <div>
-                    <h2>Інтерактивна демо робота Варікана</h2>
+                    <h2>Інтерактивна демонстрація роботи варікапу.</h2>
                 </div>
                 <div className="slideBlock">
                     <div className="demonstration">
@@ -171,7 +171,7 @@ class Slide3 extends Component{
                                 {(this.state.qw>=0)?(
                                     <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
                                           d="M 10 74 l 34 0 l 0 -50 l 342 0 l 0 92 l 0 100 l -342 0 l 0 -100 l -34 0"/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                                                         d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 30 0 l 0 -22 l -30 0 l 0 -100 l -55 0"/>)
+                                                                                                                                                         d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 0 -122 l -65 0"/>)
                                 }
 
 
