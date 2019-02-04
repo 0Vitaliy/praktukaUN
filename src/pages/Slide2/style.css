@@ -20,6 +20,15 @@
     margin-left:20px;
     margin-top: 50px;
 }
+.fon_slide2{
+    width: 20px;
+    height: 20px;
+    background: darkseagreen;
+    position: absolute;
+    top:180px;
+    left: 435px;
+    z-index: 3;
+}
 .slide2_voltm{
     display: flex;
     justify-content: center;

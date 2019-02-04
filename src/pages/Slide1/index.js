@@ -78,6 +78,7 @@ class Slide1 extends Component{
         <div className="slideBlock">
           <div className="demonstration">
               <div className="demo1">
+                  <div className='fon_slide1'></div>
                   <span className="spanH">Джерело змінної напруги</span>
                       <div className="voltmetrV slide1_voltm">
                           <div>
@@ -187,7 +188,7 @@ class Slide1 extends Component{
                       {(this.state.qw>=0)?(
                           <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
                                 d="M 46 95 l 0 -59 l 338 0 l 0 119  l 0 60 l -338 0 l 0 -90 "/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                                               d="M 44 136 l 0 80 l 342 0 l 0 -70   l 0 -112 l -150 0"/>)
+                                                                                                                                               d="M 46 134 l 0 80 l 338 0  l 0 -178 l -150 0"/>)
                       }
 
 
@@ -254,9 +255,15 @@ class Slide1 extends Component{
                           <title id="title">Демо екран</title>
                           <g className="grid x-grid" id="xGrid">
                               <line x1="90" x2="90" y1="5" y2="230"></line>
+                              /*стрілка*/
+                              <line x1="90" x2="95" y1="5" y2="15"></line>
+                              <line x1="90" x2="85" y1="5" y2="15"></line>
                           </g>
                           <g className="grid y-grid" id="yGrid">
                               <line x1="90" x2="550" y1="170" y2="170"></line>
+                              /*стрілка*/
+                              <line x1="550" x2="540" y1="170" y2="165"></line>
+                              <line x1="550" x2="540" y1="170" y2="175"></line>
                           </g>
                           <g className="labels x-labels">
 
@@ -340,9 +347,15 @@ class Slide1 extends Component{
                           <title id="title">Демо екран</title>
                           <g className="grid x-grid" id="xGrid">
                               <line x1="90" x2="90" y1="5" y2="235"></line>
+                              /*стрілка*/
+                              <line x1="90" x2="95" y1="5" y2="15"></line>
+                              <line x1="90" x2="85" y1="5" y2="15"></line>
                           </g>
                           <g className="grid y-grid" id="yGrid">
                               <line x1="90" x2="500" y1="120" y2="120"></line>
+                              /*стрілка*/
+                              <line x1="500" x2="490" y1="120" y2="115"></line>
+                              <line x1="500" x2="490" y1="120" y2="125"></line>
                           </g>
                           <g className="labels x-labels">
                               <text x="120" y="140">1</text>

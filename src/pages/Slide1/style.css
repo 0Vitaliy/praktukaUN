@@ -6,6 +6,16 @@
     margin-top: 10px;
 
 }
+.fon_slide1{
+    width: 20px;
+    height: 20px;
+    background: darkseagreen;
+    position: absolute;
+    top:142px;
+    left: 400px;
+    z-index: 3;
+}
+
 .spanH_slide1234{
     color: #323b45;
     font-size: 20px;

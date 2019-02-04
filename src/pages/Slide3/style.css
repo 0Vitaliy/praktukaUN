@@ -8,6 +8,18 @@
     top:185px;
     left: 290px;
 }
+.slide3_amperM{
+    margin-top: 10px;
+}
+.fon_slide3{
+    width: 20px;
+    height: 23px;
+    background: darkseagreen;
+    position: absolute;
+    top:286px;
+    left: 415px;
+    z-index: 3;
+}
 .slide3_block_graph{
     box-shadow: 0 0 6px rgba(0, 0, 0, .25);
     margin-left: -15px;

@@ -41,52 +41,52 @@ class Slide3 extends Component{
             var widtH=235;
             var n=2;
             //mod / n
-            var run = mod / n + 's';
-            var runX =(mod / n)*1.1 + 's';
-            var runY =(mod / n)*1.2 + 's';
-            var runK=(mod / n)*1.3 + 's';
-            var runM=(mod / n)*1.4 + 's';
+            var run = 15 + 's';
+            var runX =14 + 's';
+            var runY =13 + 's';
+            var runK=12 + 's';
+            var runM=11 + 's';
             // console.log(runX);
         }
         if(mod===2) {
             var Width=210;
             var widtH=240;
             n=7;
-            run = mod / n + 's';
-            runX =(mod / n)*1.2 + 's';
-            runY =(mod / n)*1.3 + 's';
-            runK=(mod / n)*1.4 + 's';
-            runM=(mod / n)*1.7 + 's';
+            run = mod / n *15+ 's';
+            runX =(mod / n)*1.2*15 + 's';
+            runY =(mod / n)*1.3*15 + 's';
+            runK=(mod / n)*1.4 *15+ 's';
+            runM=(mod / n)*1.7*15 + 's';
         }
         if(mod===3) {
             var Width=205;
             var widtH=245;
             n=10;
-            run = mod / n + 's';
-            runX =(mod / n)*1.3 + 's';
-            runY =(mod / n)*1.4 + 's';
-            runK=(mod / n)*1.5+ 's';
-            runM=(mod / n)*1.6 + 's';
+            run = mod / n *10+ 's';
+            runX =(mod / n)*1.3 *10+ 's';
+            runY =(mod / n)*1.4*10 + 's';
+            runK=(mod / n)*1.5*10+ 's';
+            runM=(mod / n)*1.6*10 + 's';
         }
         if(mod===4) {
             var Width=200;
             var widtH=250;
             n=10;
-            run = mod / n + 's';
-            runX =(mod / n)*1.3 + 's';
-            runY =(mod / n)*1.4 + 's';
-            runK=(mod / n)*1.5+ 's';
-            runM=(mod / n)*1.6 + 's';
+            run = mod / n *8+ 's';
+            runX =(mod / n)*1.3 *8 + 's';
+            runY =(mod / n)*1.4*8 + 's';
+            runK=(mod / n)*1.5*8+ 's';
+            runM=(mod / n)*1.6 *8+ 's';
         }
         if(mod===5) {
             var Width=190;
             var widtH=260;
             n=10;
-            run = mod / n + 's';
-            runX =(mod / n)*1.3 + 's';
-            runY =(mod / n)*1.4 + 's';
-            runK=(mod / n)*1.5+ 's';
-            runM=(mod / n)*1.6 + 's';
+            run = mod / n*7 + 's';
+            runX =(mod / n)*1.3*7 + 's';
+            runY =(mod / n)*1.4*7 + 's';
+            runK=(mod / n)*1.5*7+ 's';
+            runM=(mod / n)*1.6*7 + 's';
         }
 
         return(
@@ -98,6 +98,7 @@ class Slide3 extends Component{
                 <div className="slideBlock">
                     <div className="demonstration">
                         <div className="demo1">
+                            <div className='fon_slide3'></div>
                             <span className="spanH3">Джерело змінної напруги</span>
                             <div className='demo1-flex'>
                                 <div className="voltmetrV slide3_voltm">
@@ -271,11 +272,19 @@ class Slide3 extends Component{
                                     <title id="title">Демо екран</title>
                                     <g className="grid x-grid" id="xGrid">
                                         <line x1="400" x2="400" y1="5" y2="130"></line>
+                                        /*стрілка*/
+                                        <line x1="400" x2="405" y1="5" y2="15"></line>
+                                        <line x1="400" x2="395" y1="5" y2="15"></line>
                                     </g>
                                     <g className="grid y-grid" id="yGrid">
                                         <line x1="90" x2="450" y1="60" y2="60"></line>
+                                        /*стрілка*/
+                                        <line x1="450" x2="440" y1="60" y2="55"></line>
+                                        <line x1="450" x2="440" y1="60" y2="65"></line>
                                     </g>
                                     <g className="labels x-labels">
+
+                                        <text x="200" y="25">Демонстраційний екран</text>
                                         <text x="420" y="15">I,мкА</text>
                                         <text x="200" y="75">-5</text>
                                         <text x="240" y="75">-4</text>
@@ -283,6 +292,7 @@ class Slide3 extends Component{
                                         <text x="320" y="75">-2</text>
                                         <text x="360" y="75">-1</text>
                                         <text x="410" y="75">0</text>
+                                        <text x="445" y="75">U,В</text>
 
 
                                     </g>
@@ -318,9 +328,15 @@ class Slide3 extends Component{
                                           <title id="title">Демо екран</title>
                                           <g className="grid x-grid" id="xGrid">
                                               <line x1="400" x2="400" y1="5" y2="140"></line>
+                                              /*стрілка*/
+                                              <line x1="400" x2="405" y1="5" y2="15"></line>
+                                              <line x1="400" x2="395" y1="5" y2="15"></line>
                                           </g>
                                           <g className="grid y-grid" id="yGrid">
                                               <line x1="90" x2="450" y1="130" y2="130"></line>
+                                              /*стрілка*/
+                                              <line x1="450" x2="440" y1="130" y2="125"></line>
+                                              <line x1="450" x2="440" y1="130" y2="135"></line>
                                           </g>
                                           <g className="labels x-labels">
 
@@ -330,11 +346,12 @@ class Slide3 extends Component{
                                               <text x="320" y="145">-2</text>
                                               <text x="360" y="145">-1</text>
                                               <text x="410" y="145">0</text>
+                                              <text x="445" y="145">U,В</text>
 
 
                                           </g>
                                           <g className="labels y-labels">
-                                              <text x="445" y="15">&#916;х,мкм</text>
+                                              <text x="445" y="10">&#916;х,мкм</text>
                                               <text x="420" y="25">50</text>
                                               <text x="420" y="49">40</text>
                                               <text x="420" y="73">30</text>
@@ -366,14 +383,20 @@ class Slide3 extends Component{
                                           </g>
                                       </svg>
                                   </div>
-                                  <div className="amperM">
+                                  <div className="amperM slide3_amperM">
                                       <svg version="1.2" className="graph" aria-labelledby="title" role="img">
                                           <title id="title">Демо екран</title>
                                           <g className="grid x-grid" id="xGrid">
                                               <line x1="400" x2="400" y1="5" y2="180"></line>
+                                              /*стрілка*/
+                                              <line x1="400" x2="405" y1="5" y2="15"></line>
+                                              <line x1="400" x2="395" y1="5" y2="15"></line>
                                           </g>
                                           <g className="grid y-grid" id="yGrid">
                                               <line x1="90" x2="450" y1="170" y2="170"></line>
+                                              /*стрілка*/
+                                              <line x1="450" x2="440" y1="170" y2="165"></line>
+                                              <line x1="450" x2="440" y1="170" y2="175"></line>
                                           </g>
                                           <g className="labels x-labels">
 
@@ -383,11 +406,12 @@ class Slide3 extends Component{
                                               <text x="320" y="185">-2</text>
                                               <text x="360" y="185">-1</text>
                                               <text x="410" y="185">0</text>
+                                              <text x="445" y="185">U,В</text>
 
 
                                           </g>
                                           <g className="labels y-labels">
-                                              <text x="430" y="15">C,пф</text>
+                                              <text x="435" y="15">C,пф</text>
                                               <text x="435" y="30">2400</text>
                                               <text x="435" y="110">1200</text>
 
@@ -427,7 +451,12 @@ S – площа n-р-переходу
 Δх – ширина збідненого шару n-р-переходу
 Плавна зміна ємності відбувається при зміні величини відємної напруги, від якої залежить ширина збідненого шару. Отже, бар’єрна ємність буде зменшуватись плавно.
 Варікапи застосовуються в схемах автопідстроювання частоти, а також у параметричних підсилювачах і перетворювачах у блоках живлення, шинах ЕОМ.
-" />
+" slide1_description_head='Опис установки симуляційної моделі:'
+                                 slide1_description_span1='1.Кероване джерело змінного струму.'
+                                 slide1_description_span2='2.Вольтметр для вимірювання вхідної змінної напруги.'
+                                 slide1_description_span3='3.Діод.'
+                                 slide1_description_span4='4.Навантаження (опір).'
+                                />
                 </div>
             </div>
         )

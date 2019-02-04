@@ -40,27 +40,27 @@ class Slide2 extends Component{
 
             var n=2;
             var run =15 + 's';
-            var runX =(mod / n)*1.1 + 's';
-            var runY =(mod / n)*1.2 + 's';
-            var runK=(mod / n)*1.3 + 's';
-            var runM=(mod / n)*1.4 + 's';
+            var runX =16 + 's';
+            var runY =17 + 's';
+            var runK=18 + 's';
+            var runM=19 + 's';
             console.log(runX);
         }
         if(mod===20) {
             n=7;
-            run = mod / n + 's';
-            runX =(mod / n)*1.2 + 's';
-            runY =(mod / n)*1.3 + 's';
-            runK=(mod / n)*1.4 + 's';
-            runM=(mod / n)*1.7 + 's';
+            run = 12.2 + 's';
+            runX =13.2 + 's';
+            runY =14.2 + 's';
+            runK=15.2 + 's';
+            runM=16.2 + 's';
         }
         if(mod===25) {
             n=10;
-            run = mod / n + 's';
-            runX =(mod / n)*1.3 + 's';
-            runY =(mod / n)*1.4 + 's';
-            runK=(mod / n)*1.5+ 's';
-            runM=(mod / n)*1.6 + 's';
+            run = mod / n *3+ 's';
+            runX =(mod / n)*1.3*3 + 's';
+            runY =(mod / n)*1.4*3 + 's';
+            runK=(mod / n)*1.5*3+ 's';
+            runM=(mod / n)*1.6*3 + 's';
         }
 
 
@@ -73,6 +73,7 @@ class Slide2 extends Component{
                 <div className="slideBlock">
                     <div className="demonstration">
                         <div className="demo1">
+                            <div className='fon_slide2'></div>
                             <span className="spanH2">Джерело змінної напруги</span>
                             <div className="voltmetrV slide2_voltm">
                                 <div>
@@ -128,8 +129,8 @@ class Slide2 extends Component{
                                 <line x1="40" x2="193" y1="80" y2="80" stroke="#000000"></line>
 
                                 /*квадрат діодів*/
-                                <line x1="0" x2="538" y1="86" y2="86" stroke="#000000"></line>
-                                <line x1="240" x2="240" y1="0" y2="376" stroke="#000000"></line>
+                                {/*<line x1="0" x2="538" y1="86" y2="86" stroke="#000000"></line>*/}
+                                {/*<line x1="240" x2="240" y1="0" y2="376" stroke="#000000"></line>*/}
 
                                 <line x1="200" x2="240" y1="86" y2="126" stroke="#000000"></line>
                                 <line x1="240" x2="280" y1="126" y2="86" stroke="#000000"></line>
@@ -191,7 +192,7 @@ class Slide2 extends Component{
                                 <line x1="234" x2="443" y1="5" y2="5" stroke="#000000"></line>
 
                                 <line x1="246" x2="431" y1="17" y2="17" stroke="#000000"></line>
-                                <line x1="246" x2="246" y1="35" y2="17" stroke="#000000"></line>
+                                <line x1="246" x2="246" y1="36" y2="17" stroke="#000000"></line>
 
                                 <line x1="443" x2="443" y1="5" y2="37" stroke="#000000"></line>
                                 <line x1="431" x2="431" y1="17" y2="37" stroke="#000000"></line>
@@ -240,8 +241,8 @@ class Slide2 extends Component{
 
                                 {(this.state.qw>=0)?(
                                     <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                          d="M 46 148 l 0 -62  l 150 0  l 40 -44 l 0 -32 l 201 0 l 0 282 l -198 0 l 0 -158 l 47 -47 l 50 0 l 0 172 l -290 0 l 0 -80 "/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                                                         d="M 46 193 l 0 65 l 290 0 l 0 -173 l -50 0 l -50 -50 l 0 -24 l 200 0  l 0 280 l -198 0 l 0 -160 l -55 -45 l -138 0 l 0 50 "/>)
+                                          d="M 46 148 l 0 -62  l 148 0  l 46 -45 l 0 -30 l 197 0 l 0 281 l -197 0 l 0 -158 l 47 -47 l 50 0 l 0 172 l -291 0 l 0 -80 "/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
+                                                                                                                                                         d="M 46 193 l 0 66 l 290 0 l 0 -173 l -50 0 l -47 -50 l 0 -25 l 198 0  l 0 281 l -198 0 l 0 -160 l -45 -46 l -148 0 l 0 60 "/>)
                                 }
 
 
@@ -309,9 +310,15 @@ class Slide2 extends Component{
                                     <title id="title">Демо екран</title>
                                     <g className="grid x-grid" id="xGrid">
                                         <line x1="90" x2="90" y1="5" y2="230"></line>
+                                        /*стрілка*/
+                                        <line x1="90" x2="95" y1="5" y2="15"></line>
+                                        <line x1="90" x2="85" y1="5" y2="15"></line>
                                     </g>
                                     <g className="grid y-grid" id="yGrid">
                                         <line x1="90" x2="550" y1="170" y2="170"></line>
+                                        /*стрілка*/
+                                        <line x1="550" x2="540" y1="170" y2="165"></line>
+                                        <line x1="550" x2="540" y1="170" y2="175"></line>
                                     </g>
                                     <g className="labels x-labels">
                                         <text x="120" y="190">1</text>
@@ -381,9 +388,15 @@ class Slide2 extends Component{
                                 <title id="title">Демо екран</title>
                                 <g className="grid x-grid" id="xGrid">
                                     <line x1="90" x2="90" y1="5" y2="235"></line>
+                                    /*стрілка*/
+                                    <line x1="90" x2="95" y1="5" y2="15"></line>
+                                    <line x1="90" x2="85" y1="5" y2="15"></line>
                                 </g>
                                 <g className="grid y-grid" id="yGrid">
                                     <line x1="90" x2="500" y1="120" y2="120"></line>
+                                    /*стрілка*/
+                                    <line x1="500" x2="490" y1="120" y2="115"></line>
+                                    <line x1="500" x2="490" y1="120" y2="125"></line>
                                 </g>
                                 <g className="labels x-labels">
                                     <text x="120" y="140">1</text>
