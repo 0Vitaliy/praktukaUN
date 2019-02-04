@@ -67,7 +67,7 @@ class Slide2 extends Component{
         return(
             <div >
                 <div>
-                    <h2 className="spanH_slide1234">Інтерактивна демонстрація дво-напів-періодного випрямлення змінного електричного струму.
+                    <h2 className="spanH_slide1234">Інтерактивна демонстрація двох напівперіодного випрямлення змінного електричного струму
                     </h2>
                 </div>
                 <div className="slideBlock">
@@ -84,11 +84,11 @@ class Slide2 extends Component{
                             <svg className='sxema2' width="400" height="250" viewBox="0 0 500 350">
                                 {(this.state.qw>=0)?(
                                         <text x="55" y="200">+</text>):
-                                    (<text x="55" y="200">-</text>)
+                                    (<text x="55" y="200" className='minus'>-</text>)
                                 }
                                 {(this.state.qw>=0)?(
-                                        <text x="55" y="150">-</text>):
-                                    ( <text x="55" y="150">+</text>)
+                                        <text x="55" y="150" className='minus'>-</text>):
+                                    ( <text x="55" y="150" >+</text>)
                                 }
 
                                 <circle  r="7" cx="46" cy="193" stroke="#000000" fill='white'/>
@@ -96,7 +96,10 @@ class Slide2 extends Component{
 
                                 <circle  r="7" cx="437" cy="193" stroke="#000000" fill='white'/>
                                 <circle  r="7" cx="437" cy="148" stroke="#000000" fill='white'/>
-
+                                <text x="180" y="50">VD1</text>
+                                <text x="280" y="50">VD2</text>
+                                <text x="280" y="120">VD4</text>
+                                <text x="170" y="120">VD3</text>
 
                                 /*лінії*/
                                 <line x1="0" x2="40" y1="148" y2="148" stroke="#000000" stroke-width="2px"></line>
@@ -132,17 +135,35 @@ class Slide2 extends Component{
                                 {/*<line x1="0" x2="538" y1="86" y2="86" stroke="#000000"></line>*/}
                                 {/*<line x1="240" x2="240" y1="0" y2="376" stroke="#000000"></line>*/}
 
-                                <line x1="200" x2="240" y1="86" y2="126" stroke="#000000"></line>
-                                <line x1="240" x2="280" y1="126" y2="86" stroke="#000000"></line>
-                                <line x1="280" x2="240" y1="86" y2="46" stroke="#000000"></line>
-                                <line x1="200" x2="240" y1="86" y2="46" stroke="#000000"></line>
+                                <line x1="200" x2="215" y1="86" y2="101" stroke="#000000"></line>
+                                <line x1="228" x2="240" y1="115" y2="126" stroke="#000000"></line>
 
-                                <line x1="191" x2="234" y1="81" y2="36" stroke="#000000"></line>
+                                <line x1="240" x2="257" y1="126" y2="109" stroke="#000000"></line>
+                                <line x1="267" x2="280" y1="99" y2="86" stroke="#000000"></line>
 
-                                <line x1="245" x2="290" y1="36" y2="81" stroke="#000000"></line>
-                                <line x1="290" x2="245" y1="91" y2="136" stroke="#000000"></line>
 
-                                <line x1="191" x2="234" y1="91" y2="136" stroke="#000000"></line>
+                                <line x1="280" x2="263" y1="86" y2="69" stroke="#000000"></line>
+                                <line x1="253" x2="240" y1="59" y2="46" stroke="#000000"></line>
+
+
+                                <line x1="230" x2="240" y1="56" y2="46" stroke="#000000"></line>
+                                <line x1="200" x2="220" y1="86" y2="66" stroke="#000000"></line>
+
+                                <line x1="191" x2="212" y1="81" y2="58" stroke="#000000"></line>
+                                <line x1="222" x2="234" y1="50" y2="36" stroke="#000000"></line>
+
+
+
+                                <line x1="245" x2="260" y1="36" y2="51" stroke="#000000"></line>
+                                <line x1="270" x2="290" y1="61" y2="81" stroke="#000000"></line>
+
+
+                                <line x1="290" x2="275" y1="91" y2="106" stroke="#000000"></line>
+                                <line x1="265" x2="245" y1="116" y2="136" stroke="#000000"></line>
+
+
+                                <line x1="191" x2="208" y1="91" y2="110" stroke="#000000"></line>
+                                <line x1="221" x2="234" y1="122" y2="136" stroke="#000000"></line>
 
                                  /*діоди в квадраті*/
                                 <line x1="221" x2="201" y1="93" y2="117" stroke="#000000"></line>
@@ -354,31 +375,31 @@ class Slide2 extends Component{
                                     <g className="data" data-setname="Our first data set">
                                         <circle cx="90" cy="170" data-value="7.2" r="4"></circle>
                                         <circle className={this.state.one?'none':'block'} cx="120" cy="110" data-value="8.1" r="4"></circle>
-                                        <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="170" y2="110" stroke="red"></line>
+                                        <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="170" y2="110" stroke="#1E90FF"></line>
                                         <circle className={this.state.two?'none':'block'} cx="150" cy="70" data-value="7.7" r="4"></circle>
-                                        <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="110" y2="70" stroke="red"></line>
+                                        <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="110" y2="70" stroke="#1E90FF"></line>
                                         <circle className={this.state.tree?'none':'block'} cx="180" cy="50" data-value="6.8" r="4"></circle>
-                                        <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="70" y2="50" stroke="red"></line>
+                                        <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="70" y2="50" stroke="#1E90FF"></line>
                                         <circle className={this.state.four?'none':'block'} cx="210" cy="70" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="50" y2="70" stroke="red"></line>
+                                        <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="50" y2="70" stroke="#1E90FF"></line>
                                         <circle className={this.state.five?'none':'block'} cx="240" cy='110' data-value="6.7" r="4"></circle>
-                                        <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="70" y2="110" stroke="red"></line>
+                                        <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="70" y2="110" stroke="#1E90FF"></line>
                                         <circle className={this.state.six?'none':'block'} cx="270" cy="170" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="110" y2="170" stroke="red"></line>
+                                        <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="110" y2="170" stroke="#1E90FF"></line>
                                         <circle className={this.state.seven?'none':'block'} cx="300" cy="110" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="170" y2="110" stroke="red"></line>
+                                        <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="170" y2="110" stroke="#1E90FF"></line>
                                         <circle className={this.state.eight?'none':'block'} cx="330" cy="70" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="110" y2="70" stroke="red"></line>
+                                        <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="110" y2="70" stroke="#1E90FF"></line>
                                         <circle className={this.state.nine?'none':'block'} cx="360" cy="50" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="70" y2="50" stroke="red"></line>
+                                        <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="70" y2="50" stroke="#1E90FF"></line>
                                         <circle className={this.state.ten?'none':'block'} cx="390" cy="70" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="50" y2="70" stroke="red"></line>
+                                        <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="50" y2="70" stroke="#1E90FF"></line>
 
                                         <circle className={this.state.eleven?'none':'block'} cx="420" cy="110" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="70" y2="110" stroke="red"></line>
+                                        <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="70" y2="110" stroke="#1E90FF"></line>
 
                                         <circle className={this.state.twelve?'none':'block'} cx="450" cy="170" data-value="6.7" r="4"></circle>
-                                        <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="110" y2="170" stroke="red"></line>
+                                        <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="110" y2="170" stroke="#1E90FF"></line>
                                     </g>
                                 </svg>
                             </div>
@@ -469,14 +490,14 @@ class Slide2 extends Component{
                     </div>
                     <Description text="
 Більш ефективно випрямлення змінної напруги відбувається у схемі з чотирма діодами у містковій схемі.
-Протягом позитивного напів-періоду зміни вхідної напруги  Ua(+) діоди VD1 і VD4 відкриті, а VD2 i VD3 – закриті. Струм буде проходити шляхом: верхня гілка (+), діод VD1 , навантаження, діод VD4, нижня гілка (-).
+Протягом позитивного напів-періоду зміни вхідної напруги  U(+) діоди VD1 і VD4 відкриті, а VD2 i VD3 – закриті. Струм буде проходити шляхом: верхня гілка (+), діод VD1 , навантаження, діод VD4, нижня гілка (-).
 Протягом негативного напів- періоду  зміни вхідної напруги VD1 і VD4 закриті, а VD2 i VD3 – відкриті. Тому шлях струму  інший. Тобто  за час тривалістю двох напів-періодів зміни вхідної напруги вихідний струм через навантаження буде проходити, але мати один і той же знак.
 
 "slide1_description_head='Опис установки симуляційної моделі:'
-                                 slide1_description_span1='1.Кероване джерело змінного струму.'
+                                 slide1_description_span1='1.Кероване джерело змінної напруги.'
                                  slide1_description_span2='2.Місткова схема включення чотирьох діодів.'
                                  slide1_description_span3='3.Амперметр для вимірювання вихідного струму.'
-                                 slide1_description_span4='4.Провідники з рухомим електронами.
+                                 slide1_description_span4='4.Провідники з рухомими електронами.
 '
                                  />
 

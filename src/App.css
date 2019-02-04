@@ -1,6 +1,7 @@
 #root{
-    padding-bottom: 80px;
+    padding-bottom: 83px;
     background: darkseagreen;
+    font-family: 'Roboto', sans-serif;
 }
 .amperM{
     width: 200px;
@@ -46,7 +47,7 @@ h2{
 }
 .demonstration{
   width: 80%;
-  border: 1px solid slategray;
+  /*border: 1px solid slategray;*/
   border-radius: 8px;
 }
 .footer>a:active{

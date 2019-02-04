@@ -300,44 +300,44 @@ class Slide1 extends Component{
                           <g className="data" data-setname="Our first data set">
                               <circle cx="90" cy="170" data-value="7.2" r="4"></circle>
                               <circle className={this.state.one?'none':'block'} cx="120" cy="110" data-value="8.1" r="4"></circle>
-                              <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="170" y2="110" stroke="red"></line>
+                              <line className={this.state.one?'none':'block'} x1="90" x2="120" y1="170" y2="110" stroke="#1E90FF"></line>
 
                               <circle className={this.state.two?'none':'block'} cx="150" cy="70" data-value="7.7" r="4"></circle>
-                              <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="110" y2="70" stroke="red"></line>
+                              <line className={this.state.two?'none':'block'} x1="120" x2="150" y1="110" y2="70" stroke="#1E90FF"></line>
 
                               <circle className={this.state.tree?'none':'block'} cx="180" cy="50" data-value="6.8" r="4"></circle>
-                              <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="70" y2="50" stroke="red"></line>
+                              <line className={this.state.tree?'none':'block'} x1="150" x2="180" y1="70" y2="50" stroke="#1E90FF"></line>
 
                               <circle className={this.state.four?'none':'block'} cx="210" cy="70" data-value="6.7" r="4"></circle>
-                              <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="50" y2="70" stroke="red"></line>
+                              <line className={this.state.four?'none':'block'} x1="180" x2="210" y1="50" y2="70" stroke="#1E90FF"></line>
 
                               <circle className={this.state.five?'none':'block'} cx="240" cy="110" data-value="6.7" r="4"></circle>
-                              <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="70" y2="110" stroke="red"></line>
+                              <line className={this.state.five?'none':'block'} x1="210" x2="240" y1="70" y2="110" stroke="#1E90FF"></line>
 
                               <circle className={this.state.six?'none':'block'} cx="270" cy="170" data-value="6.7" r="4"></circle>
-                              <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="110" y2="170" stroke="red"></line>
+                              <line className={this.state.six?'none':'block'} x1="240" x2="270" y1="110" y2="170" stroke="#1E90FF"></line>
 
 
                               <circle className={this.state.seven?'none':'block'} cx="300" cy="180" data-value="6.7" r="4"></circle>
-                              <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="170" y2="180" stroke="red"></line>
+                              <line className={this.state.seven?'none':'block'} x1="270" x2="300" y1="170" y2="180" stroke="#1E90FF"></line>
 
 
 
 
 
                               <circle className={this.state.eight?'none':'block'} cx="330" cy="185" data-value="6.7" r="4"></circle>
-                              <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="180" y2="185" stroke="red"></line>
+                              <line className={this.state.eight?'none':'block'} x1="300" x2="330" y1="180" y2="185" stroke="#1E90FF"></line>
 
 
                               <circle className={this.state.nine?'none':'block'} cx="360" cy="190" data-value="6.7" r="4"></circle>
-                              <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="185" y2="190" stroke="red"></line>
+                              <line className={this.state.nine?'none':'block'} x1="330" x2="360" y1="185" y2="190" stroke="#1E90FF"></line>
 
                               <circle className={this.state.ten?'none':'block'} cx="390" cy="185" data-value="6.7" r="4"></circle>
-                              <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="190" y2="185" stroke="red"></line>
+                              <line className={this.state.ten?'none':'block'} x1="360" x2="390" y1="190" y2="185" stroke="#1E90FF"></line>
                               <circle className={this.state.eleven?'none':'block'} cx="420" cy="180" data-value="6.7" r="4"></circle>
-                              <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="185" y2="180" stroke="red"></line>
+                              <line className={this.state.eleven?'none':'block'} x1="390" x2="420" y1="185" y2="180" stroke="#1E90FF"></line>
                               <circle className={this.state.twelve?'none':'block'} cx="450" cy="170" data-value="6.7" r="4"></circle>
-                              <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="180" y2="170" stroke="red"></line>
+                              <line className={this.state.twelve?'none':'block'} x1="420" x2="450" y1="180" y2="170" stroke="#1E90FF"></line>
                           </g>
                       </svg>
                   </div>
@@ -430,12 +430,12 @@ class Slide1 extends Component{
 
 Діоди в схемах випрямлячів включаються за одно- і дво-напів-періодних схемах.
 На базі одного діода можна виготовити одно-напів-періодний випрямляч.
-Розглянемо принцип роботи такого випрямляча. На рисунку показано схема перетворення вихідного сигналу на прикладі вольтамперної характеристики діода. Вхідна напруга на діоді змінюється синусоїдально (зеленого кольору): півперіода напруга приймає додатні значення (0-1) і двугі півперіода (1-2) вона приймає відємні значення.
-Коли на вході діоду змінна напруга приймає додатні значення (0-1, 2-3, …), діод відкритий і на виході із діоду змінний струм (коричневого кольору кольору) майже відтворює форму синусоїди вхідного сигналу. При цьому можливе підсилення величини вихідного сигналу, що показано пунктиром.
+Розглянемо принцип роботи такого випрямляча. На рисунку показано схема перетворення вихідного сигналу на прикладі вольтамперної характеристики діода. Вхідна напруга на діоді змінюється синусоїдально (червоного кольору): півперіода напруга приймає додатні значення (0-1) і другі півперіода (1-2) вона приймає відємні значення.
+Коли на вході діоду змінна напруга приймає додатні значення (0-1, 2-3, …), діод відкритий і на виході із діоду змінний струм (синього кольору) майже відтворює форму синусоїди вхідного сигналу. При цьому можливе підсилення величини вихідного сигналу.
 Коли на вході діоду змінна напруга приймає відємні значення (1-2, …), діод включений в непрямому напрямі, то лише за рахунок неосновних носіїв заряду діод пропускає невеликий струм відємного напрямку.
 
 " slide1_description_head='Опис установки симуляційної моделі:'
-                         slide1_description_span1='1.Кероване джерело змінного струму.'
+                         slide1_description_span1='1.Кероване джерело змінної напруги.'
                          slide1_description_span2='2.Вольтметр для вимірювання вхідної змінної напруги.'
                          slide1_description_span3='3.Діод.'
                          slide1_description_span4='4.Навантаження (опір).'

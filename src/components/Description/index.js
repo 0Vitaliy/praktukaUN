@@ -25,7 +25,14 @@ class Description extends Component{
                     <span className='slide1_description_span'>{this.props.slide1_description_span5}</span>
 
 
-                    <p><h2 className='slide1_description_head'>Теоретичні відомості</h2>{this.props.text}</p>
+                    <p><h2 className='slide1_description_head'>Теоретичні відомості</h2>{this.props.text}<br/>
+                        {this.props.formula}<br/>
+                        {this.props.dial}<br/>
+                        {this.props.stala}<br/>
+                        {this.props.plo}<br/>
+                        {this.props.delta}<br/>
+                        {this.props.text1}<br/>
+                    </p>
                 </div>
             </div>
         )

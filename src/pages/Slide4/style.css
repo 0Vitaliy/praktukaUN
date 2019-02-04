@@ -5,8 +5,18 @@
     width: 80px;
     height: 80px;
     border-radius: 5px;
-    margin-right: 13px!important;
+    margin-right: 20px!important;
     margin-top:190px!important;
+}
+.minus{
+    font-size: 25px;
+}
+.slide4_figurni{
+
+    position: absolute;
+    transform: rotate(-90deg);
+    left: 290px;
+    top: 265px;
 }
 .button_slide4_fanar{
     position: absolute;
@@ -35,7 +45,7 @@
     border: 1px solid cadetblue;
     padding: 20px 10px;
     border-radius: 10px;
-    top: 275px;
+    top: 271px;
     left: 460px;
 }
 .slide4_amper {

@@ -73,6 +73,7 @@ class Slide4 extends Component{
         var mod=Math.abs(this.state.qw)
         // console.log(this.state.qw);
         if(mod===0) {
+            var fig='{'
             var VD ="M 250 1 l 10 0 l 0 65 l -10 0"
             if(this.state.fotodiod===0){
                 var color_lampa='black'
@@ -95,6 +96,7 @@ class Slide4 extends Component{
 
         }
         if(mod===1) {
+            var fig='{'
             VD ="M 250 1 l 10 0 l 0 65 l -10 0"
             if(this.state.fotodiod===0){
                 var color_lampa='black'
@@ -124,6 +126,7 @@ class Slide4 extends Component{
             // console.log(runX);
         }
         if(mod===2) {
+            var fig='{'
             if(this.state.fotodiod===0){
                 var color_lampa='black'
                 amperdani=-0.5;
@@ -152,6 +155,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.7 *10 + 's';
         }
         if(mod===3) {
+            var fig='{'
             VD ="M 245 1 l 20 0 l 0 65 l -20 0"
             if(this.state.fotodiod===0){
                 var color_lampa='black'
@@ -179,6 +183,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.6*10  + 's';
         }
         if(mod===4) {
+            var fig='{'
             if(this.state.fotodiod===0){
                 var color_lampa='black'
                 var Width=193;
@@ -207,6 +212,7 @@ class Slide4 extends Component{
             runM=(mod / n)*1.6*10  + 's';
         }
         if(mod===5) {
+            var fig='{'
             if(this.state.fotodiod===0){
                 var color_lampa='black'
                 amperdani=-0.5;
@@ -242,6 +248,7 @@ class Slide4 extends Component{
           <div className="slideBlock">
               <div className="demonstration">
                   <div className="demo1">
+                      <span className='slide4_figurni'>{fig}</span>
                       <span className="spanH4">Джерело змінної напруги</span>
                       <div className='slide4_amperdani'>
                           <span>{amperdani} мкА</span>
@@ -267,14 +274,14 @@ class Slide4 extends Component{
 
                       <svg className='slide4_swg' width="400" height="250" viewBox="0 0 500 350">
 
-                          <text x="55" y="125">-</text>):
+                          <text x="55" y="125" className='minus'>-</text>):
 
                           <text x="55" y="175">+</text>
                           <path d="M 225 5 l 75 0 l 0 100 l -75 0"
                                 fill="#FFFF00" stroke="none" stroke-width="3" />
                           <path d="M 150 5 l 75 0 l 0 100 l -75 0"
                                 fill="#FFB6C1" stroke="none" stroke-width="3" />
-                          <text x="220" y="125">&#916;х</text>
+                          <text x="218" y="125">&#916;х</text>
 
                           <text x="160" y="20">p</text>
                           <text x="280" y="20">n</text>
@@ -331,7 +338,7 @@ class Slide4 extends Component{
                           <circle  r="7.5" cx="404" cy="85" stroke="#000000" fill='white'/>
 
 
-                          <line x1="40" x2="40" y1="118" y2="44" stroke="#000000"></line>
+                          <line x1="40" x2="40" y1="118" y2="44" stroke="#000000" ></line>
                           <line x1="52" x2="52" y1="118" y2="56" stroke="#000000"></line>
 
                           <line x1="40" x2="150" y1="44" y2="44" stroke="#000000"></line>
@@ -460,6 +467,7 @@ class Slide4 extends Component{
                                       <line x1="450" x2="440" y1="60" y2="65"></line>
                                   </g>
                                   <g className="labels x-labels">
+                                      <text x="200" y="25">Демонстраційний екран</text>
                                       <text x="420" y="15">I,мкА</text>
                                       <text x="200" y="75">-5</text>
                                       <text x="240" y="75">-4</text>
@@ -537,19 +545,19 @@ class Slide4 extends Component{
                                   <g className="data" data-setname="Our first data set">
                                       <circle cx="400" cy="60" data-value="7.2" r="4"></circle>
                                       <circle className={this.state.one1?'none':'block'} cx="360" cy="93" data-value="8.1" r="4"></circle>
-                                      <line className={this.state.one1?'none':'block'} x1="400" x2="360" y1="60" y2="93" stroke="red"></line>
+                                      <line className={this.state.one1?'none':'block'} x1="400" x2="360" y1="60" y2="93" stroke="#ffff66"></line>
 
                                       <circle className={this.state.two1?'none':'block'} cx="320" cy="100" data-value="7.7" r="4"></circle>
-                                      <line className={this.state.two1?'none':'block'} x1="360" x2="320" y1="93" y2="100" stroke="red"></line>
+                                      <line className={this.state.two1?'none':'block'} x1="360" x2="320" y1="93" y2="100" stroke="#ffff66"></line>
 
                                       <circle className={this.state.tree1?'none':'block'} cx="280" cy="107" data-value="6.8" r="4"></circle>
-                                      <line className={this.state.tree1?'none':'block'} x1="320" x2="280" y1="100" y2="107" stroke="red"></line>
+                                      <line className={this.state.tree1?'none':'block'} x1="320" x2="280" y1="100" y2="107" stroke="#ffff66"></line>
 
                                       <circle className={this.state.four1?'none':'block'} cx="240" cy="111" data-value="6.7" r="4"></circle>
-                                      <line className={this.state.four1?'none':'block'} x1="280" x2="240" y1="107" y2="111" stroke="red"></line>
+                                      <line className={this.state.four1?'none':'block'} x1="280" x2="240" y1="107" y2="111" stroke="#ffff66"></line>
 
                                       <circle className={this.state.five1?'none':'block'} cx="200" cy="115" data-value="6.7" r="4"></circle>
-                                      <line className={this.state.five1?'none':'block'} x1="240" x2="200" y1="111" y2="115" stroke="red"></line>
+                                      <line className={this.state.five1?'none':'block'} x1="240" x2="200" y1="111" y2="115" stroke="#ffff66"></line>
 
 
                                   </g>
@@ -595,19 +603,19 @@ class Slide4 extends Component{
                                   <g className="data" data-setname="Our first data set">
                                       <circle cx="400" cy="60" data-value="7.2" r="4"></circle>
                                       <circle className={this.state.one2?'none':'block'} cx="360" cy="140" data-value="8.1" r="4"></circle>
-                                      <line className={this.state.one2?'none':'block'} x1="400" x2="360" y1="60" y2="140" stroke="red"></line>
+                                      <line className={this.state.one2?'none':'block'} x1="400" x2="360" y1="60" y2="140" stroke="#FF8C00"></line>
 
                                       <circle className={this.state.two2?'none':'block'} cx="320" cy="160" data-value="7.7" r="4"></circle>
-                                      <line className={this.state.two2?'none':'block'} x1="360" x2="320" y1="140" y2="160" stroke="red"></line>
+                                      <line className={this.state.two2?'none':'block'} x1="360" x2="320" y1="140" y2="160" stroke="#FF8C00"></line>
 
                                       <circle className={this.state.tree2?'none':'block'} cx="280" cy="161" data-value="6.8" r="4"></circle>
-                                      <line className={this.state.tree2?'none':'block'} x1="320" x2="280" y1="160" y2="161" stroke="red"></line>
+                                      <line className={this.state.tree2?'none':'block'} x1="320" x2="280" y1="160" y2="161" stroke="#FF8C00"></line>
 
                                       <circle className={this.state.four2?'none':'block'} cx="240" cy="162" data-value="6.7" r="4"></circle>
-                                      <line className={this.state.four2?'none':'block'} x1="280" x2="240" y1="161" y2="162" stroke="red"></line>
+                                      <line className={this.state.four2?'none':'block'} x1="280" x2="240" y1="161" y2="162" stroke="#FF8C00"></line>
 
                                       <circle className={this.state.five2?'none':'block'} cx="200" cy="163" data-value="6.7" r="4"></circle>
-                                      <line className={this.state.five2?'none':'block'} x1="240" x2="200" y1="162" y2="163" stroke="red"></line>
+                                      <line className={this.state.five2?'none':'block'} x1="240" x2="200" y1="162" y2="163" stroke="#FF8C00"></line>
 
 
                                   </g>
@@ -618,10 +626,10 @@ class Slide4 extends Component{
 
               </div>
               <Description text="Фотодіодом називається фотогальванічний приймач випромінювання, світлочутливий елемент який представляє собою структуру напівпровідникового діода без внутрішнього підсилення.
-Принцип дії. При опроміненні напівпровідника світовим потоком Ф зростає фотогенерація особистих носіїв зарядів, що призводить до збільшення кількості як основних, так і неосновних носіїв зарядів. Фотогенерація – це явище фотоефекту (перехід електронів у зону провідності за рахунок поглинання кванта падаючого світла з довжиною хвилі λ).
-У даному випадку діод включений у запірному напрямку, бо фотогенерація в значній мірі буде впливати на зворотній струм, так як не основних носіїв зарядів значно менше, ніж основних.
+Принцип дії. При опроміненні напівпровідника світовим потоком Ф зростає фотогенерація  носіїв зарядів, що призводить до збільшення кількості як основних, так і неосновних носіїв зарядів. Фотогенерація – це явище фотоефекту (перехід електронів у зону провідності за рахунок поглинання кванта падаючого світла з довжиною хвилі λ).
+У даному випадку діод включений у запірному напрямку, бо фотогенерація в значній мірі буде впливати на зворотній струм, так як неосновних носіїв зарядів значно менше, ніж основних.
 " slide1_description_head='Опис установки симуляційної моделі:'
-                           slide1_description_span1='1.Кероване джерело змінного струму.'
+                           slide1_description_span1='1.Кероване джерело змінної напруги.'
                            slide1_description_span2='2.Вольтметр для вимірювання вхідної змінної напруги.'
                            slide1_description_span3='3.Діод.'
                            slide1_description_span4='4.Навантаження (опір).'

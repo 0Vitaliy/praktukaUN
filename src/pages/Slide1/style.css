@@ -17,6 +17,7 @@
 }
 
 .spanH_slide1234{
+    margin-left: 50px;
     color: #323b45;
     font-size: 20px;
 }
@@ -37,6 +38,9 @@
     border-radius: 10px;
     width: 500px;
     height: 250px;
+}
+.minus{
+    font-size: 25px;
 }
 .slide1_graph{
     margin-left: -40px;
