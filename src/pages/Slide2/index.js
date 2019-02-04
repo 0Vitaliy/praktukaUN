@@ -171,10 +171,10 @@ class Slide2 extends Component{
 
 
                                 /*транзистор*/
-                                <line x1="422" x2="458" y1="37" y2="37" stroke="#000000"></line>
+                                <line x1="422" x2="454" y1="37" y2="37" stroke="#000000"></line>
                                 <line x1="422" x2="422" y1="37" y2="87" stroke="#000000"></line>
-                                <line x1="458" x2="458" y1="37" y2="87" stroke="#000000"></line>
-                                <line x1="422" x2="458" y1="87" y2="87" stroke="#000000"></line>
+                                <line x1="454" x2="454" y1="37" y2="87" stroke="#000000"></line>
+                                <line x1="422" x2="454" y1="87" y2="87" stroke="#000000"></line>
 
 
 

@@ -5,8 +5,13 @@
     width: 80px;
     height: 80px;
     border-radius: 5px;
-    margin-right: -20px!important;
+    margin-right: 13px!important;
     margin-top:190px!important;
+}
+.button_slide4_fanar{
+    position: absolute;
+    top: 150px;
+    left: 120px;
 }
 .slide4_lampa{
     position: absolute;

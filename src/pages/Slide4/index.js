@@ -261,7 +261,7 @@ class Slide4 extends Component{
                           </div>
                       </div>
 
-                      <div >
+                      <div className='button_slide4_fanar'>
                           <button className='button4' onClick={(e)=>this.OpenFotoDiod(e)}>^</button><span>{this.state.fotodiod}</span>
                       </div>
 
