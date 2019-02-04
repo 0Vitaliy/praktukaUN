@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Description from "../../components/Description";
 import '../../App.css'
+import './style.css'
 
 
 class Slide3 extends Component{
@@ -15,10 +16,11 @@ class Slide3 extends Component{
     };
 
     OpenBlock() {
+        if(this.state.i<5){
         this.setState({
             qw: this.state.value[this.state.i],
             i:this.state.i+1
-        })
+        })}
         if(this.state.qw===0 && this.state.i===0) {this.setState({one: false})}
         if(this.state.qw===-1 && this.state.i===1) {this.setState({two: false})}
         if(this.state.qw===-2 && this.state.i===2) {this.setState({tree: false})}
@@ -31,13 +33,14 @@ class Slide3 extends Component{
         var mod=Math.abs(this.state.qw)
         // console.log(this.state.qw);
         if(mod===0) {
-            var Width=250;
-            var widtH=260;
+            var Width=220;
+            var widtH=230;
         }
         if(mod===1) {
-            var Width=250;
-            var widtH=260;
+            var Width=215;
+            var widtH=235;
             var n=2;
+            //mod / n
             var run = mod / n + 's';
             var runX =(mod / n)*1.1 + 's';
             var runY =(mod / n)*1.2 + 's';
@@ -46,8 +49,8 @@ class Slide3 extends Component{
             // console.log(runX);
         }
         if(mod===2) {
-            var Width=247;
-            var widtH=263;
+            var Width=210;
+            var widtH=240;
             n=7;
             run = mod / n + 's';
             runX =(mod / n)*1.2 + 's';
@@ -56,8 +59,8 @@ class Slide3 extends Component{
             runM=(mod / n)*1.7 + 's';
         }
         if(mod===3) {
-            var Width=244;
-            var widtH=266;
+            var Width=205;
+            var widtH=245;
             n=10;
             run = mod / n + 's';
             runX =(mod / n)*1.3 + 's';
@@ -66,8 +69,8 @@ class Slide3 extends Component{
             runM=(mod / n)*1.6 + 's';
         }
         if(mod===4) {
-            var Width=241;
-            var widtH=269;
+            var Width=200;
+            var widtH=250;
             n=10;
             run = mod / n + 's';
             runX =(mod / n)*1.3 + 's';
@@ -76,8 +79,8 @@ class Slide3 extends Component{
             runM=(mod / n)*1.6 + 's';
         }
         if(mod===5) {
-            var Width=235;
-            var widtH=275;
+            var Width=190;
+            var widtH=260;
             n=10;
             run = mod / n + 's';
             runX =(mod / n)*1.3 + 's';
@@ -88,99 +91,127 @@ class Slide3 extends Component{
 
         return(
             <div>
+                <span className='delta'>&#916;х</span>
                 <div>
-                    <h2>Інтерактивна демонстрація роботи варікапу.</h2>
+                    <h2 className="spanH_slide1234">Інтерактивна демонстрація роботи варікапу.</h2>
                 </div>
                 <div className="slideBlock">
                     <div className="demonstration">
                         <div className="demo1">
-                            <div className="voltmetrV">
-                                <button  onClick={(e)=>this.OpenBlock(e)}>^</button><span>{this.state.qw}V</span>
-                            </div>
+                            <span className="spanH3">Джерело змінної напруги</span>
+                            <div className='demo1-flex'>
+                                <div className="voltmetrV slide3_voltm">
+                                    <div>
+                                        <button  onClick={(e)=>this.OpenBlock(e)}>^</button><span>{this.state.qw}V</span>
+                                    </div>
+                                </div>
 
                             <svg width="400" height="250" viewBox="0 0 500 350">
-                                {(this.state.qw>=0)?(
-                                        <text x="10" y="140">+</text>):
-                                    (<text x="10" y="140">-</text>)
-                                }
-                                {(this.state.qw>=0)?(
-                                        <text x="10" y="60">-</text>):
-                                    ( <text x="10" y="60">+</text>)
-                                }
+
+                                        <text x="55" y="125">-</text>):
+                                        <text x="55" y="175">+</text>
+                                <path d="M 225 5 l 75 0 l 0 100 l -75 0"
+                                      fill="#FFFF00" stroke="none" stroke-width="3" />
+                                <path d="M 150 5 l 75 0 l 0 100 l -75 0"
+                                      fill="#FFB6C1" stroke="none" stroke-width="3" />
+                                {/*<text x="220" y="125">&#916;х</text>*/}
+                                <text x="160" y="20">p</text>
+                                <text x="280" y="20">n</text>
+                                /*стрелки*/
+                                <line x1="40" x2="30" y1="120" y2="115" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="40" x2="30" y1="120" y2="125" stroke="#000000" stroke-width="2px"></line>
+
+                                <line x1="40" x2="30" y1="170" y2="165" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="40" x2="30" y1="170" y2="175" stroke="#000000" stroke-width="2px"></line>
+
+                                <line x1="413" x2="423" y1="120" y2="125" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="413" x2="423" y1="120" y2="115" stroke="#000000" stroke-width="2px"></line>
+
+                                <line x1="413" x2="423" y1="170" y2="165" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="413" x2="423" y1="170" y2="175" stroke="#000000" stroke-width="2px"></line>
 
 
-                                <line x1="10" x2="40" y1="70" y2="70" stroke="#000000"></line>
-                                <line x1="40" x2="40" y1="70" y2="20" stroke="#000000"></line>
-                                <line x1="40" x2="210" y1="20" y2="20" stroke="#000000"></line>
-                                <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                                {/*<line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>*/}
-                                {/*<line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>*/}
-                                {/*<line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>*/}
-                                <line x1="300" x2="390" y1="20" y2="20" stroke="#000000"></line>
+                                /*лінії*/
+                                <line x1="0" x2="40" y1="120" y2="120" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="0" x2="40" y1="170" y2="170" stroke="#000000" stroke-width="2px" ></line>
 
-                                <line x1="210" x2="300" y1="1" y2="1" stroke="#000000"></line>
-                                <line x1="210" x2="210" y1="1" y2="65" stroke="#000000"></line>
+                                <line x1="410" x2="500" y1="120" y2="120" stroke="#000000" stroke-width="2px"></line>
+                                <line x1="410" x2="500" y1="170" y2="170" stroke="#000000" stroke-width="2px"></line>
+                                /*діод*/
 
-                                <line x1={Width} x2={Width} y1="1" y2="65" stroke="#000000" stroke-dasharray="10"></line>
-                                <line x1={widtH} x2={widtH} y1="1" y2="65" stroke="#000000" stroke-dasharray="10"></line>
+                                <line x1="150" x2="300" y1="5" y2="5" stroke="#000000"></line>
+                                <line x1="150" x2="150" y1="5" y2="105" stroke="#000000"></line>
 
+                                <line x1="300" x2="300" y1="5" y2="105" stroke="#000000"></line>
+                                <line x1="150" x2="300" y1="105" y2="105" stroke="#000000"></line>
+                                <line x1="225" x2="225" y1="5" y2="105" stroke="#000000"></line>
 
-                                <line x1="300" x2="300" y1="1" y2="65" stroke="#000000"></line>
-                                <line x1="210" x2="300" y1="65" y2="65" stroke="#000000"></line>
+                                <line x1={Width} x2={Width} y1="5" y2="105" stroke="#000000" stroke-dasharray="10"></line>
+                                <line x1={widtH} x2={widtH} y1="5" y2="105" stroke="#000000" stroke-dasharray="10"></line>
 
-                                <line x1="390" x2="390" y1="20" y2="120" stroke="#000000"></line>
-                                {/*<line x1="390" x2="420" y1="120" y2="120" stroke="#000000"></line>*/}
-                                {/*<line x1="420" x2="420" y1="120" y2="150" stroke="#000000"></line>*/}
-                                {/*<line x1="420" x2="390" y1="150" y2="150" stroke="#000000"></line>*/}
-                                <line x1="390" x2="390" y1="150" y2="220" stroke="#000000"></line>
-                                <line x1="390" x2="330" y1="220" y2="220" stroke="#000000"></line>
-                                <line x1="330" x2="330" y1="200" y2="240" stroke="#000000"></line>
-                                <line x1="270" x2="330" y1="200" y2="200" stroke="#000000"></line>
-                                <line x1="270" x2="330" y1="240" y2="240" stroke="#000000"></line>
-                                <line x1="270" x2="270" y1="200" y2="240" stroke="#000000"></line>
-                                <line x1="270" x2="40" y1="220" y2="220" stroke="#000000"></line>
-                                <line x1="40" x2="40" y1="220" y2="120" stroke="#000000"></line>
-                                <line x1="40" x2="10" y1="120" y2="120" stroke="#000000"></line>
-
-                                <line x1="10" x2="48" y1="78" y2="78" stroke="#000000"></line>
-                                <line x1="48" x2="48" y1="78" y2="28" stroke="#000000"></line>
-                                <line x1="48" x2="210" y1="28" y2="28" stroke="#000000"></line>
-                                <line x1="300" x2="300" y1="5" y2="35" stroke="#000000"></line>
-                                {/*<line x1="300" x2="330" y1="5" y2="20" stroke="#000000"></line>*/}
-                                {/*<line x1="300" x2="330" y1="35" y2="20" stroke="#000000"></line>*/}
-                                {/*<line x1="330" x2="330" y1="5" y2="35" stroke="#000000"></line>*/}
-                                <line x1="300" x2="382" y1="28" y2="28" stroke="#000000"></line>
-                                <line x1="382" x2="382" y1="28" y2="128" stroke="#000000"></line>
-                                {/*<line x1="382" x2="412" y1="128" y2="128" stroke="#000000"></line>*/}
-                                {/*<line x1="412" x2="412" y1="128" y2="142" stroke="#000000"></line>*/}
-                                {/*<line x1="412" x2="382" y1="142" y2="142" stroke="#000000"></line>*/}
-                                <line x1="382" x2="382" y1="142" y2="212" stroke="#000000"></line>
-                                <line x1="382" x2="330" y1="212" y2="212" stroke="#000000"></line>
-
-                                {/*<line x1="330" x2="330" y1="200" y2="240" stroke="#000000"></line>*/}
-                                {/*<line x1="270" x2="330" y1="200" y2="200" stroke="#000000"></line>*/}
-                                {/*<line x1="270" x2="330" y1="240" y2="240" stroke="#000000"></line>*/}
-                                <line x1="270" x2="270" y1="200" y2="240" stroke="#000000"></line>
-
-                                <line x1="270" x2="48" y1="212" y2="212" stroke="#000000"></line>
-
-                                <line x1="48" x2="48" y1="212" y2="112" stroke="#000000"></line>
-                                <line x1="48" x2="10" y1="112" y2="112" stroke="#000000"></line>
+                                /*транзистор*/
+                                <line x1="185" x2="185" y1="220" y2="260" stroke="#000000"></line>
+                                <line x1="185" x2="265" y1="220" y2="220" stroke="#000000"></line>
+                                <line x1="185" x2="265" y1="260" y2="260" stroke="#000000"></line>
+                                <line x1="265" x2="265" y1="220" y2="260" stroke="#000000"></line>
 
 
-                                {(this.state.qw>=0)?(
+                                <circle  r="7" cx="46" cy="170" stroke="#000000" fill='white'/>
+                                <circle  r="7" cx="46" cy="120" stroke="#000000" fill='white'/>
+
+
+                                <circle  r="7" cx="404" cy="170" stroke="#000000" fill='white'/>
+                                <circle  r="7" cx="404" cy="120" stroke="#000000" fill='white'/>
+
+
+                                <line x1="40" x2="40" y1="118" y2="44" stroke="#000000"></line>
+                                <line x1="52" x2="52" y1="118" y2="56" stroke="#000000"></line>
+
+                                <line x1="40" x2="150" y1="44" y2="44" stroke="#000000"></line>
+                                <line x1="52" x2="150" y1="56" y2="56" stroke="#000000"></line>
+
+                                <line x1="300" x2="410" y1="44" y2="44" stroke="#000000"></line>
+                                <line x1="300" x2="398" y1="56" y2="56" stroke="#000000"></line>
+
+                                <line x1="265" x2="398" y1="234" y2="234" stroke="#000000"></line>
+                                <line x1="265" x2="410" y1="246" y2="246" stroke="#000000"></line>
+
+                                <line x1="52" x2="185" y1="234" y2="234" stroke="#000000"></line>
+                                <line x1="40" x2="185" y1="246" y2="246" stroke="#000000"></line>
+
+
+                                <line x1="52" x2="52" y1="234" y2="172" stroke="#000000"></line>
+                                <line x1="40" x2="40" y1="246" y2="172" stroke="#000000"></line>
+
+
+                                <line x1="398" x2="398" y1="56" y2="115" stroke="#000000"></line>
+                                <line x1="410" x2="410" y1="44" y2="115" stroke="#000000"></line>
+
+
+                                <line x1="398" x2="398" y1="172" y2="234" stroke="#000000"></line>
+                                <line x1="410" x2="410" y1="172" y2="246" stroke="#000000"></line>
+
+
+
+
+
+
+
+
+
+                                {(this.state.qw<=0)?(
                                     <path id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                          d="M 10 74 l 34 0 l 0 -50 l 342 0 l 0 92 l 0 100 l -342 0 l 0 -100 l -34 0"/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
-                                                                                                                                                         d="M 10 116 l 34 0 l 0 100 l 342 0 l 0 -70  l 0 -122 l -65 0"/>)
+                                          d="M 46 120 l 0 -70 l 358 0 l 0 90 l 0 100 l -358 0 l 0 -70 "/>):( <path  id="motionPath" fill="none" stroke="#000000" strokeMiterlimit="100"
+                                                                                                                                                         d="M 46 170  l 0 70 l 358 0 l 0 -70  l 0 -122 l -90 0"/>)
                                 }
 
 
-                                <circle id="circle" r="3" cx="0" cy="0" fill="tomato"/>
-                                <circle id="circlex" r="3" cx="0" cy="0" fill="tomato" />
-                                <circle id="circley" r="3" cx="0" cy="0" fill="tomato" />
-                                <circle id="circlek" r="3" cx="0" cy="0" fill="tomato" />
-                                <circle  id="circlez" r="3" cx="0" cy="0" fill="tomato" />
-                                <circle  id="circlem" r="3" cx="0" cy="0" fill="tomato" />
+                                <circle id="circle" r="4" cx="0" cy="0" fill="tomato"/>
+                                <circle id="circlex" r="4" cx="0" cy="0" fill="tomato" />
+                                <circle id="circley" r="4" cx="0" cy="0" fill="tomato" />
+                                <circle id="circlek" r="4" cx="0" cy="0" fill="tomato" />
+                                <circle  id="circlez" r="4" cx="0" cy="0" fill="tomato" />
+                                <circle  id="circlem" r="4" cx="0" cy="0" fill="tomato" />
 
 
                                 <animateMotion
@@ -233,8 +264,9 @@ class Slide3 extends Component{
                                 </animateMotion>
 
                             </svg>
-                              <div>
-                            <div className="amperM">
+                            </div>
+                              <div className="slide3_block_graph">
+                            <div className="amperM slide3_amper">
                                 <svg version="1.2" className="graph" aria-labelledby="title" role="img">
                                     <title id="title">Демо екран</title>
                                     <g className="grid x-grid" id="xGrid">
@@ -244,7 +276,7 @@ class Slide3 extends Component{
                                         <line x1="90" x2="450" y1="60" y2="60"></line>
                                     </g>
                                     <g className="labels x-labels">
-
+                                        <text x="420" y="15">I,мкА</text>
                                         <text x="200" y="75">-5</text>
                                         <text x="240" y="75">-4</text>
                                         <text x="280" y="75">-3</text>
@@ -302,6 +334,7 @@ class Slide3 extends Component{
 
                                           </g>
                                           <g className="labels y-labels">
+                                              <text x="445" y="15">&#916;х,мкм</text>
                                               <text x="420" y="25">50</text>
                                               <text x="420" y="49">40</text>
                                               <text x="420" y="73">30</text>
@@ -354,7 +387,7 @@ class Slide3 extends Component{
 
                                           </g>
                                           <g className="labels y-labels">
-
+                                              <text x="430" y="15">C,пф</text>
                                               <text x="435" y="30">2400</text>
                                               <text x="435" y="110">1200</text>
 
@@ -385,7 +418,16 @@ class Slide3 extends Component{
                         </div>
 
                     </div>
-                    <Description text="op" />
+                    <Description text="Варікапом називається напівпровідниковий діод, у якого в якості основного параметру використовується бар’єрна ємність n-р-переходу, величина якої варіюється при зміні величини зворотної напруги. Отже, варікап застосовується, як конденсатор з керованою плавною змінною ємності, чого не можна досягти іншими засобами (наприклад, батареєю конденсаторів).
+Принцип дії.  Збіднену на носії область р-п переходу тут використано в якості діелектрика. Тому можна використати формулу електроємності плоского конденсатора
+Сб =
+ε- діелектрична проникливість матеріалів n-р-переходу
+εо – стала
+S – площа n-р-переходу
+Δх – ширина збідненого шару n-р-переходу
+Плавна зміна ємності відбувається при зміні величини відємної напруги, від якої залежить ширина збідненого шару. Отже, бар’єрна ємність буде зменшуватись плавно.
+Варікапи застосовуються в схемах автопідстроювання частоти, а також у параметричних підсилювачах і перетворювачах у блоках живлення, шинах ЕОМ.
+" />
                 </div>
             </div>
         )

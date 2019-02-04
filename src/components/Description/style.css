@@ -1,9 +1,18 @@
 .description{
-    height: 500px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
     width: 18%;
     border: 1px solid slategray;
     border-radius: 8px;
 
+}
+.slide1_description_span{
+    display: block;
+}
+.slide1_description_head{
+    text-align: center;
+    color: #323b45;
 }
 .voltmetrV{
     vertical-align: center;
@@ -20,6 +29,7 @@
     /*opacity: 0;*/
 /*}*/
 .description>button{
+    color: white;
     background: slategray;
     border: none;
     margin-top: 10px;
@@ -30,8 +40,10 @@
     display: none;
 }
 .block{
+    height: 480px;
+    overflow: scroll;
     padding:5px;
-    text-align: center;
+    text-align: left;
     display: block;
 }
 

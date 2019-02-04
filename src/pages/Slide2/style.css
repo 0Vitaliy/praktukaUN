@@ -4,11 +4,41 @@
 }
 
 .sxema2{
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 .sinSlide1{
     margin-top: -40px;
     margin-left: -30px;
+}
+.slide2_graph {
+    margin-left: -40px;
+}
+.spanH2{
+    position: absolute;
+    width: 100px;
+    font-size: 13px;
+    margin-left:20px;
+    margin-top: 50px;
+}
+.slide2_voltm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 5px;
+    margin-right: -20px!important;
+    margin-top: 80px!important;
+}
+.slide2_voltm button{
+
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: darkgrey;
+}
+.voltmetrV{
+
 }
 .voltmetr{
     vertical-align: center;
@@ -19,4 +49,26 @@
     border: 1px solid cadetblue;
     width: 60px;
     height: 50px;
+}
+.slide2_amper{
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    margin-left: -15px;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+    width: 530px;
+    height: 250px;
+}
+.slide2_sin{
+    margin-top: 5px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
+    margin-left: 10px;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+}
+.slide2_sin_graph{
+    width: 500px;
+    height: 250px;
+    margin-left: -40px;
 }
